@@ -1,0 +1,80 @@
+
+<div>
+    <h3>Create Employee</h3>
+     <form [formGroup]="formDataForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" formControlName="firstName">
+      </div>
+        <div>    
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" formControlName="lastName">
+          </div>
+          <div>
+            <label for="dateOfBirth">Date of Birth:</label>
+            <input type="date" id="dateOfBirth" formControlName="dateOfBirth">
+          </div>
+            <div>
+              <label for="isActive">Is Active:</label>
+              <input type="checkbox" id="isActive" formControlName="isActive">
+            </div>
+         <div>
+        <label for="age">Age:</label>
+        <input type="number" id="age" formControlName="age">
+      </div>
+      <button type="submit">{{ selectedEmployee ? 'Update' : 'Save' }}</button> 
+      <div>
+        <label for="status">Status:</label>
+        <select id="status" class="form-control" (change)="onStatusChange($event)">
+          <option value="All">All</option>
+          <option value="Active">Active</option>
+          <option value="Inactive">Inactive</option>
+        </select>
+      </div>
+    </form>
+</div>
+ 
+
+<h1>USER_LIST</h1>       
+<div>
+    <h2>Employee List</h2>
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+      <div class="form-group" style="display: flex; align-items: center;">
+        <input
+        type="text"
+        [(ngModel)]="searchTerm"
+        (input)="applyFilter()"
+        placeholder="Search..."
+        style="height: 30px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px;"
+        />    
+      </div>  
+    </div>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">FirstName</th>
+                <th scope="col">LastName</th>
+                <th scope="col">DateOfBirth</th>
+                <th scope="col">isActive</th>
+                <th scope=",col">Age</th>
+               <th scope ="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of filteredEmployeeList" >
+                <td>{{ item.id }}</td>
+                <td>{{ item.firstName }}</td>
+                <td>{{ item.lastName }}</td>
+                <td>{{ item.dateOfBirth }}</td>
+                <td>{{ item.isActive }}</td>
+                <td>{{ item.age }}</td>
+                <td>
+                  <button type="button" (click)="editEmployee(item)">Edit</button>
+                  <button type="button" (click)="deleteEmployee(item.id )">Remove</button>
+                </td>
+                </tr>
+        </tbody>
+    </table>
+

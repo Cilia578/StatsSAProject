@@ -1,0 +1,126 @@
+h1 {
+  text-align: center;
+  background-color: yellow;
+}
+h3 {
+  text-align: center;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 30px;
+  width: 100%;
+  text-align: center;
+  margin-top: 0 auto;
+}
+th {
+  border: 0px solid #000;
+  background-color: #f2f2f2;
+}
+button {
+  padding-left: 0%;
+}
+
+.button-container {
+  text-align: center;
+  background-color: yellow;
+}
+form {
+  width: 400px;
+  margin: 0 auto;
+}
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="checkbox"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.custom-select {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.form-group {
+  display: flex;
+  align-items: right;
+}
+
+.label-wrapper {
+  flex: 1;
+  text-align: right;
+  margin-right: 10px;
+}
+.select-wrapper {
+  flex: 2;
+}
+
+/* Style the container for the Status dropdown */
+.status-container {
+  display: flex; /* Use flexbox to align label and select box horizontally */
+  align-items: center; /* Vertically center the label and select box */
+  margin-bottom: 20px; /* Add space between the "USER_LIST" heading and the dropdown */
+}
+
+/* Style the label for the Status dropdown */
+label[for="status"] {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333; /* Text color */
+  margin-right: 10px; /* Add space between the label and select box */
+}
+
+/* Style the select box for Status */
+#status.form-control {
+  width: 200px; /* Adjust the width as needed */
+  height: 35px; /* Adjust the height as needed */
+  font-size: 14px; /* Adjust the font size as needed */
+  border: 1px solid #ccc; /* Border style */
+  border-radius: 4px; /* Rounded corners */
+  padding: 5px; /* Add padding inside the select box */
+  background-color: #fff; /* Background color */
+  color: #333; /* Text color */
+}
+
+/* Style the table (adjust as needed) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px; /* Add space between the dropdown and the table */
+}
+
+table,
+th,
+td {
+  border: 1px solid #ccc; /* Border style */
+}
+
+th,
+td {
+  padding: 10px; /* Add padding inside table cells */
+  text-align: center; /* Adjust text alignment as needed */
+}
